@@ -412,11 +412,7 @@ public final class OngoingGroupCallContext {
             self.width = Int(frameData.width)
             self.height = Int(frameData.height)
             self.orientation = OngoingCallVideoOrientation(frameData.orientation)
-            if frameData.hasDeviceRelativeOrientation {
-                self.deviceRelativeOrientation = OngoingCallVideoOrientation(frameData.deviceRelativeOrientation)
-            } else {
-                self.deviceRelativeOrientation = nil
-            }
+			self.deviceRelativeOrientation = nil
             self.mirrorHorizontally = frameData.mirrorHorizontally
             self.mirrorVertically = frameData.mirrorVertically
         }
